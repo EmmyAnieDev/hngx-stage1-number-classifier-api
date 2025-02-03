@@ -63,15 +63,20 @@ python app.py
 
 2. The API will be available at `http://localhost:8000`
 
+
 ## API Documentation
 
-### GET /api/classify-number
+### Method: `GET`
 
-Analyzes a number and returns its properties.
+### Endpoint: `/api/classify-number`
 
-#### Query Parameters
+### Query Parameter: `number` (required): The integer to analyze
 
-- `number` (required): The integer to analyze
+#### Full URL for Localhost Testing: Analyzes a number and returns its properties.
+ 
+```bash
+   http://localhost:8000/api/classify-number?number=5
+   ```
 
 #### Success Response (200 OK)
 
@@ -100,6 +105,24 @@ Analyzes a number and returns its properties.
 
 #### Occurs when an invalid input (like a letter/alphabet) is provided.
 
+```json
+{
+    "number": "null",
+    "error": true
+}
+```
+
+#### Occurs when the `number` parameter is missing from the request.
+
+```json
+{
+    "number": "",
+    "error": true
+}
+```
+
+#### Occurs when the `number` parameter has an empty value.
+
 
 ## Deployment
 
@@ -108,9 +131,11 @@ The API is deployed on Railway and can be accessed at:
 https://number-classifier-api-production.up.railway.app/
 ```
 
-## 🧪 Quick Test
+## Quick Test
 
 To test the full URL with the parameter:
+
+### Method: `GET`
 
 ```bash
 curl "https://number-classifier-api-production.up.railway.app/api/classify-number?number=5"
