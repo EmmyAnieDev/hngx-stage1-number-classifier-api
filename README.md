@@ -39,8 +39,8 @@ number-classification-api/
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/EmmyAnieDev/number-classifier-api.git
-    cd number-classification-api
+    git clone https://github.com/EmmyAnieDev/hngx-stage1-number-classifier-api.git
+    cd hngx-stage1-number-classifier-api
     ```
 
 2. Create a virtual environment and activate it:
